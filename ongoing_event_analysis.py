@@ -9,7 +9,7 @@ import seaborn as sns
 sns.set(font="Malgun Gothic",style='whitegrid')
 
 def ongoing_event_sentiment(df):
-    with open('SentiWord/SentiWord_info.json', encoding='utf-8-sig', mode='r') as f: 
+    with open('Word/SentiWord_info.json', encoding='utf-8-sig', mode='r') as f: 
         SentiWord_info = json.load(f)
         sentiword_dic = pd.DataFrame(SentiWord_info)
 
