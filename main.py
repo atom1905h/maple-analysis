@@ -16,7 +16,7 @@ job_data = pd.read_csv('data/jobs.csv')
 def overview():
     st.text_area("개요",
                  "- 타겟 대상: 넥슨 / 메이플스토리 \n"
-                "- 사용방법\n \t 1. Python version = 3.11.4 \n \t 2. pip install requirements.txt \n \t 3. crawling.ipynb 파일 실행 \n \t 4. topick_modeling.ipynb 실행 \n \t 5. streamlit run main.py \n"
+                "- 사용방법\n \t 1. Python version = 3.11.4(conda create -n name python=3.11.4) \n \t 2. pip install -r requirements.txt \n \t 3. crawling.ipynb 실행 \n \t 4. topick_modeling.ipynb 실행 \n \t 5. streamlit run main.py \n"
                 "- 수집사이트 \n \t 1. https://www.fmkorea.com/ \n \t 2. https://maplestory.nexon.com/Home/Main\n"
                 "- 수집내용 \n \t 1. 현재 진행중인 이벤트에 대한 기간, 댓글 수, 조회수, 댓글 내용 \n \t 2. 정기적으로 진행하는 이벤트에 대한 조회수, 추천수, 댓글 수, 댓글 내용, 진행한 날짜 \n \t 3. 메이플스토리에 있는 직업 별로 게시글, 게시글 분류 항목, 조회수, 댓글 수, 추천 수, 게시글 날짜\n"
                 "- 활용도/의미 \n \t 1. 이벤트 기획의 향상: 이벤트 참여자들의 감정 및 피드백을 파악하여 이를 기반으로 미래 이벤트의 주제, 형식, 진행방식 등을 개선하고 다양한 참여자의 의견을 수렴할 수 있습니다. \n \t 2. 성과 평가: 정기적인 이벤트의 성과를 정량적으로 측정하고 평가함으로써, 해당 이벤트가 목표를 달성했는지를 확인할 수 있습니다. 이를 통해 이벤트의 효과성을 평가하고 개선점을 도출할 수 있습니다. \n \t"
@@ -25,7 +25,7 @@ def overview():
                 "2. 정기적으로 진행하는 이벤트(썬데이 메이플)에 대한 데이터 분석 \n \t \t ☛ 시계열 분석 \n \t \t ☛ 워드클라우드 분석 \n \t"
                 "3. 메이플스토리 직업별 게시글 데이터 분석 \n \t \t ☛ 막대그래프 분석 \n \t \t ☛ 토픽 모델링")
 def plus():
-     with st.expander("설명"):
+     with st.expander("데이터 분석 추가 설명"):
         st.write('1. 댓글 내용에서 추출한 키워드들을 워드클라우드로 시각화하여 어떤 주요 주제들이 도드라지는지 확인 \n'
                  '2. 긍정적인 키워드와 부정적인 키워드의 빈도를 비교하여 이벤트에 대한 참여자들의 감정을 파악 \n'
                  '3. 조회수, 추천수, 댓글 수의 시계열 데이터를 분석하여 이벤트의 성과 추이를 확인.특정 날짜에 조회수와 댓글 수가 증가하는 경향이 파악 \n'
