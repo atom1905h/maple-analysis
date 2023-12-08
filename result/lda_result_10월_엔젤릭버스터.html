@@ -1,0 +1,41 @@
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.4.0/pyLDAvis/js/ldavis.v1.0.0.css">
+
+
+<div id="ldavis_el2606022343504207044341190632" style="background-color:white;"></div>
+<script type="text/javascript">
+
+var ldavis_el2606022343504207044341190632_data = {"mdsDat": {"x": [-0.0, 0.0, 0.0, 0.0, 0.0], "y": [0.0, -0.0, -0.0, -0.0, 0.0], "topics": [1, 2, 3, 4, 5], "cluster": [1, 1, 1, 1, 1], "Freq": [79.94408339449484, 5.014012958384615, 5.013980548360106, 5.01397570548288, 5.013947393277561]}, "tinfo": {"Term": ["\uadf8\ub807\uad6c\ub098", "\uc5d4\uc824\ub9ad\ubc84\uc2a4\ud130\ub294", "\ud574\uc801\uc774\uc600\uad6c\ub098", "\ud574\uc801\uc774\uc600\uad6c\ub098", "\uc5d4\uc824\ub9ad\ubc84\uc2a4\ud130\ub294", "\uadf8\ub807\uad6c\ub098", "\uadf8\ub807\uad6c\ub098", "\ud574\uc801\uc774\uc600\uad6c\ub098", "\uc5d4\uc824\ub9ad\ubc84\uc2a4\ud130\ub294", "\uadf8\ub807\uad6c\ub098", "\ud574\uc801\uc774\uc600\uad6c\ub098", "\uc5d4\uc824\ub9ad\ubc84\uc2a4\ud130\ub294", "\uadf8\ub807\uad6c\ub098", "\uc5d4\uc824\ub9ad\ubc84\uc2a4\ud130\ub294", "\ud574\uc801\uc774\uc600\uad6c\ub098", "\uadf8\ub807\uad6c\ub098", "\uc5d4\uc824\ub9ad\ubc84\uc2a4\ud130\ub294", "\ud574\uc801\uc774\uc600\uad6c\ub098"], "Freq": [0.0, 1.0, 1.0, 0.7994421711339754, 0.7994415993293131, 0.7994386688304189, 0.05014032104005428, 0.050140092413323734, 0.050139980341396995, 0.050140014869964, 0.05013972348483797, 0.05013969210490132, 0.050139984372364554, 0.050139688504676205, 0.050139607813488474, 0.05013966538648018, 0.05013951297065289, 0.05013923951872745], "Total": [0.0, 1.0, 1.0, 1.0000008343643532, 1.0000004732509407, 0.9999986544992819, 0.9999986544992819, 1.0000008343643532, 1.0000004732509407, 0.9999986544992819, 1.0000008343643532, 1.0000004732509407, 0.9999986544992819, 1.0000004732509407, 1.0000008343643532, 0.9999986544992819, 1.0000004732509407, 1.0000008343643532], "Category": ["Default", "Default", "Default", "Topic1", "Topic1", "Topic1", "Topic2", "Topic2", "Topic2", "Topic3", "Topic3", "Topic3", "Topic4", "Topic4", "Topic4", "Topic5", "Topic5", "Topic5"], "logprob": [3.0, 2.0, 1.0, -1.0986, -1.0986, -1.0986, -1.0986, -1.0986, -1.0986, -1.0986, -1.0986, -1.0986, -1.0986, -1.0986, -1.0986, -1.0986, -1.0986, -1.0986], "loglift": [3.0, 2.0, 1.0, 0.0, 0.0, -0.0, 0.0, -0.0, -0.0, 0.0, -0.0, -0.0, 0.0, -0.0, -0.0, 0.0, 0.0, -0.0]}, "token.table": {"Topic": [1, 1, 1], "Freq": [1.0000013455025285, 0.9999995267492833, 0.999999165636343], "Term": ["\uadf8\ub807\uad6c\ub098", "\uc5d4\uc824\ub9ad\ubc84\uc2a4\ud130\ub294", "\ud574\uc801\uc774\uc600\uad6c\ub098"]}, "R": 3, "lambda.step": 0.01, "plot.opts": {"xlab": "PC1", "ylab": "PC2"}, "topic.order": [3, 2, 1, 4, 5]};
+
+function LDAvis_load_lib(url, callback){
+  var s = document.createElement('script');
+  s.src = url;
+  s.async = true;
+  s.onreadystatechange = s.onload = callback;
+  s.onerror = function(){console.warn("failed to load library " + url);};
+  document.getElementsByTagName("head")[0].appendChild(s);
+}
+
+if(typeof(LDAvis) !== "undefined"){
+   // already loaded: just create the visualization
+   !function(LDAvis){
+       new LDAvis("#" + "ldavis_el2606022343504207044341190632", ldavis_el2606022343504207044341190632_data);
+   }(LDAvis);
+}else if(typeof define === "function" && define.amd){
+   // require.js is available: use it to load d3/LDAvis
+   require.config({paths: {d3: "https://d3js.org/d3.v5"}});
+   require(["d3"], function(d3){
+      window.d3 = d3;
+      LDAvis_load_lib("https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.4.0/pyLDAvis/js/ldavis.v3.0.0.js", function(){
+        new LDAvis("#" + "ldavis_el2606022343504207044341190632", ldavis_el2606022343504207044341190632_data);
+      });
+    });
+}else{
+    // require.js not available: dynamically load d3 & LDAvis
+    LDAvis_load_lib("https://d3js.org/d3.v5.js", function(){
+         LDAvis_load_lib("https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.4.0/pyLDAvis/js/ldavis.v3.0.0.js", function(){
+                 new LDAvis("#" + "ldavis_el2606022343504207044341190632", ldavis_el2606022343504207044341190632_data);
+            })
+         });
+}
+</script>
